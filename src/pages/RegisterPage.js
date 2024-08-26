@@ -11,7 +11,6 @@ import Iconify from "../components/iconify";
 import { LoginForm } from "../sections/auth/login";
 import logs from "./on.png";
 import { Link } from "react-router-dom";
-import Register from "src/sections/auth/Register";
 
 // ----------------------------------------------------------------------
 
