@@ -43,7 +43,7 @@ const Single2 = ({ item, onChange }) => {
       };
 
       await axios.put(
-        `http://localhost:5000/api/blog/${data._id}`,
+        `https://ogaposapi.vercel.app/api/blog/${data._id}`,
         newproperties
       );
       alert("successfully Updated Property");

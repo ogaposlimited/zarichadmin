@@ -87,7 +87,7 @@ const NewProperties2 = () => {
         desc1: desc1,
       };
 
-      await axios.post("http://localhost:5000/api/blog", newproperties);
+      await axios.post("https://ogaposapi.vercel.app/api/blog", newproperties);
       setLoading(false);
     } catch (err) {
       console.log(err);

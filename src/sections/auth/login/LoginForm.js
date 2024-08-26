@@ -36,7 +36,7 @@ const LoginForm = () => {
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://ogaposapi.vercel.app/api/auth/login",
         credentials
       );
       if (res.data.isAdmin) {

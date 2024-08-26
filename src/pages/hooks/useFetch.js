@@ -10,7 +10,7 @@ const useFetch = (url) => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:5000/api${url}`);
+        const res = await axios.get(`https://ogaposapi.vercel.app/api${url}`);
         setData(res.data);
       } catch (err) {
         setError(err);
@@ -23,7 +23,7 @@ const useFetch = (url) => {
   const reFetch = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:5000/api${url}`);
+      const res = await axios.get(`https://ogaposapi.vercel.app/api${url}`);
       setData(res.data);
     } catch (err) {
       setError(err);

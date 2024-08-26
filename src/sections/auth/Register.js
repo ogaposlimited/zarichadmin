@@ -34,7 +34,10 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", credentials);
+      await axios.post(
+        "https://ogaposapi.vercel.app/api/auth/register",
+        credentials
+      );
       navigate("/");
     } catch (err) {}
   };

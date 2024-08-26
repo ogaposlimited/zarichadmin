@@ -43,7 +43,7 @@ const Datatable2 = ({ columns, refreshKey, setRefreshKey }) => {
   const handleDelete = async (id) => {
     console.log("Deleting item with ID:", id);
     try {
-      await axios.delete(`http://localhost:5000/api/blog/${id}`);
+      await axios.delete(`https://ogaposapi.vercel.app/api/blog/${id}`);
 
       // Update the list by filtering out the deleted item
       setList((prevList) => prevList.filter((item) => item._id !== id));
@@ -69,7 +69,7 @@ const Datatable2 = ({ columns, refreshKey, setRefreshKey }) => {
         return (
           <div className="cellAction">
             <Link
-              to={`http://localhost:5000/api/blog/${params.row._id}`}
+              to={`https://ogaposapi.vercel.app/api/blog/${params.row._id}`}
               style={{ textDecoration: "none" }}
             >
               <div className="viewButton">View</div>
