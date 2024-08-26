@@ -1,0 +1,27 @@
+.new .newContainer .bottom .right form .formInput input,
+.new .newContainer .top .right form .formInput input {
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 5px;
+  width: 100%;
+}
+.new .newContainer .bottom .right form,
+.new .newContainer .top .right form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.new .newContainer .bottom .right form,
+.new .newContainer .top .right form {
+  padding: 0 20px;
+}
+
+.new .newContainer .bottom .right form .formInput,
+.new .newContainer .top .right form .formInput {
+  width: 40%;
+}
+.new .newContainer .bottom .right form button,
+.new .newContainer .top .right form button {
+}

@@ -1,0 +1,46 @@
+/* VideoCarousel.css */
+
+.video-carousel-container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.video-slide {
+  margin: 0 20px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-frame {
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0; /* Background color for the video frame */
+}
+
+.video-frame:hover {
+  transform: scale(1.05);
+  z-index: 1;
+}
+
+.slick-arrow {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  z-index: 2;
+}
+
+.slick-next {
+  right: 0;
+}
+
+.slick-prev {
+  left: 0;
+}

@@ -1,0 +1,188 @@
+.new {
+  width: 100%;
+  display: flex;
+}
+
+.newContainer {
+  flex: 6;
+}
+
+.newContainer .top,
+.newContainer .bottom {
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+}
+
+.newContainer .top h1 {
+  color: lightgray;
+  font-size: 20px;
+}
+
+.newContainer .top .left {
+  flex: 1;
+  text-align: center;
+}
+
+.newContainer .top .left img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.newContainer .top .right {
+  flex: 2;
+  padding: 0px 20px;
+}
+
+.newContainer .top .right form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.newContainer .top .right .selectRooms {
+  width: 100%;
+}
+
+.newContainer .top .right .selectRooms select {
+  width: 100%;
+  padding: 10px;
+}
+
+.newContainer .top .right .formInput {
+  width: 40%;
+}
+
+.newContainer .top .right .formInput label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.newContainer .top .right .formInput label .icon {
+  cursor: pointer;
+}
+
+.newContainer .top .right .formInput input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.newContainer .top .right button {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#desc > textarea {
+  width: 30%;
+  height: 50px;
+}
+
+.primaryBtn {
+  margin: 20px 10px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 13px 25px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  border: none;
+  color: white;
+  background: #185adb;
+  transition: all 0.25s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px -10px rgba(24, 90, 219, 0.6);
+}
+.new {
+  width: 100%;
+  display: flex;
+}
+
+.newContainer {
+  flex: 6;
+}
+
+.newContainer .top,
+.newContainer .bottom {
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+}
+
+.newContainer .top h1 {
+  color: lightgray;
+  font-size: 20px;
+}
+
+.newContainer .top .left {
+  flex: 1;
+  text-align: center;
+}
+
+.newContainer .top .left img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.newContainer .top .right {
+  flex: 2;
+  padding: 0px 20px;
+}
+
+.newContainer .top .right form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.newContainer .top .right .formInput {
+  width: 40%;
+}
+
+.newContainer .top .right .formInput label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.newContainer .top .right .formInput label .icon {
+  cursor: pointer;
+}
+
+.newContainer .top .right .formInput input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+
+.newContainer .top .right button {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
