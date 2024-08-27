@@ -14,8 +14,6 @@ import { userColumns, propertiesColumns } from "./datatablesource";
 import List2 from "./pages/list2/List2";
 import NewProperties from "./pages/newproperties/NewProperties";
 import New from "./pages/new/New";
-import Register from "./sections/auth/Register";
-import RegisterPage from "./pages/RegisterPage";
 
 // ----------------------------------------------------------------------
 
@@ -25,10 +23,7 @@ export default function Router() {
       path: "/",
       element: <LoginPage />,
     },
-    {
-      path: "/register",
-      element: <RegisterPage />,
-    },
+
     {
       path: "/dashboard",
       element: <DashboardLayout />,
