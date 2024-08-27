@@ -10,7 +10,7 @@ const Datatable2 = ({ columns, refreshKey, setRefreshKey }) => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
   const [list, setList] = useState();
-  const { data, loading, error } = useFetch(`/properties`);
+  const { data, loading, error } = useFetch(`/blog`);
 
   useEffect(() => {
     setList(data);
