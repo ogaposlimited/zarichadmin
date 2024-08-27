@@ -39,6 +39,7 @@ const NewProperties4 = () => {
   const [selectedOption, setSelectedOption] = useState(false);
   const [loading, setLoading] = useState(false);
   const [editorHtml, setEditorHtml] = useState(""); // State for the editor content
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -84,7 +85,7 @@ const NewProperties4 = () => {
         desc1: editorHtml,
       };
 
-      await axios.post("https://ogaposapi.vercel.app/api/blog", newproperties);
+      await axios.post(`${apiUrl}/api/blog`, newproperties);
       setLoading(false);
     } catch (err) {
       console.log(err);

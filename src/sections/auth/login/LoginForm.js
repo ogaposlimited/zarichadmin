@@ -23,6 +23,8 @@ const LoginForm = () => {
   });
   const [showPassword, setShowPassword] = useState(false);
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const { loading, error, dispatch } = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -35,10 +37,7 @@ const LoginForm = () => {
     e.preventDefault();
     dispatch({ type: "LOGIN_START" });
     try {
-      const res = await axios.post(
-        "https://ogaposapi.vercel.app/api/auth/login",
-        credentials
-      );
+      const res = await axios.post(`${apiUrl}/api/auth/login`, credentials);
       if (res.data.isAdmin) {
         dispatch({ type: "LOGIN_SUCCESS", payload: res.data.details });
 

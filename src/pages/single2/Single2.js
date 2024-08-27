@@ -6,6 +6,7 @@ import useFetch from "../hooks/useFetch";
 const Single2 = ({ item, onChange }) => {
   const [show, setShow] = useState(false);
   const [files, setFiles] = useState("");
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const { setData, data, loading, error } = useFetch(
     `/properties/find/${path}`
@@ -42,10 +43,7 @@ const Single2 = ({ item, onChange }) => {
         photos: list,
       };
 
-      await axios.put(
-        `https://ogaposapi.vercel.app/api/blog/${data._id}`,
-        newproperties
-      );
+      await axios.put(`${apiUrl}/api/blog/${data._id}`, newproperties);
       alert("successfully Updated Property");
     } catch (err) {
       console.log(err);

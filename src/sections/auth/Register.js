@@ -22,6 +22,8 @@ const Register = () => {
   });
   const [showPassword, setShowPassword] = useState(false);
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const { loading, error, dispatch } = useContext(AuthContext);
 
   const navigate = useNavigate();
@@ -34,10 +36,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      await axios.post(
-        "https://ogaposapi.vercel.app/api/auth/register",
-        credentials
-      );
+      await axios.post(`${apiUrl}/api/auth/register`, credentials);
       navigate("/");
     } catch (err) {}
   };

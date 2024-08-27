@@ -6,6 +6,8 @@ const New = ({ inputs, title }) => {
   const [file, setFile] = useState("");
   const [info, setInfo] = useState({});
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
@@ -28,10 +30,7 @@ const New = ({ inputs, title }) => {
         img: url,
       };
 
-      await axios.post(
-        "https://ogaposapi.vercel.app/api/auth/register",
-        newUser
-      );
+      await axios.post(`${apiUrl}/api/auth/register`, newUser);
     } catch (err) {
       console.log(err);
     }

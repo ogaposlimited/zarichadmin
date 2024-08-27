@@ -6,11 +6,13 @@ const useFetch = (url) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
+  const apiUrl = process.env.REACT_APP_API_URL;
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`https://ogaposapi.vercel.app/api${url}`);
+        const res = await axios.get(`${apiUrl}/api${url}`);
         setData(res.data);
       } catch (err) {
         setError(err);
@@ -23,7 +25,7 @@ const useFetch = (url) => {
   const reFetch = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(`https://ogaposapi.vercel.app/api${url}`);
+      const res = await axios.get(`${apiUrl}/api${url}`);
       setData(res.data);
     } catch (err) {
       setError(err);
