@@ -36,7 +36,7 @@ const modules = {
         color: [
           "#000000", // Black
           "#ffffff", // White
-          "#ff0000", // Red
+          "#0c3481", // Red
           "#00ff00", // Green
           "#0000ff", // Blue
           "#ffff00", // Yellow

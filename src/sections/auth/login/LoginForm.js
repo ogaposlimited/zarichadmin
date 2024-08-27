@@ -89,7 +89,7 @@ const LoginForm = () => {
         type="submit"
         variant="contained"
         onClick={handleClick}
-        style={{ backgroundColor: "red" }}
+        style={{ backgroundColor: "#0c3481" }}
       >
         Login
       </LoadingButton>
