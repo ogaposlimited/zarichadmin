@@ -10,7 +10,7 @@ const Datatable2 = ({ columns, refreshKey, setRefreshKey }) => {
   const location = useLocation();
   const path = location.pathname.split("/")[1];
   const [list, setList] = useState();
-  const { data, loading, error } = useFetch(`/blog`);
+  const { data, loading, error, reFetch } = useFetch(`/blog`);
   const apiUrl = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
@@ -40,6 +40,18 @@ const Datatable2 = ({ columns, refreshKey, setRefreshKey }) => {
   //     setList((prevState) => [...prevState, item]); // where 'item' is the deleted item
   //   }
   // };
+  useEffect(() => {
+    // If you want to trigger reFetch when refreshKey changes
+    reFetch();
+  }, [refreshKey, reFetch]);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
 
   const handleDelete = async (id) => {
     console.log("Deleting item with ID:", id);
@@ -50,7 +62,7 @@ const Datatable2 = ({ columns, refreshKey, setRefreshKey }) => {
       setList((prevList) => prevList.filter((item) => item._id !== id));
 
       alert("Successfully deleted");
-
+      reFetch();
       // Trigger a re-render by changing the refreshKey
       setRefreshKey((prevKey) => {
         console.log("Incrementing refreshKey:", prevKey + 1);
@@ -70,7 +82,7 @@ const Datatable2 = ({ columns, refreshKey, setRefreshKey }) => {
         return (
           <div className="cellAction">
             <Link
-              to={`${apiUrl}/api/blog/${params.row._id}`}
+              to={`${apiUrl}/api/find/blog/${params.row._id}`}
               style={{ textDecoration: "none" }}
             >
               <div className="viewButton">View</div>

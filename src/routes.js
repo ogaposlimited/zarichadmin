@@ -34,6 +34,7 @@ export default function Router() {
         // { path: 'user', element: <UserPage /> },
         { path: "user", element: <List columns={userColumns} /> },
         { path: "blog", element: <List2 columns={propertiesColumns} /> },
+        // { path: "blog/:id", element: <Edit /> },
 
         // { path: 'products', element: <ProductsPage /> },
       ],

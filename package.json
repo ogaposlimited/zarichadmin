@@ -33,7 +33,9 @@
     ]
   },
   "eslintConfig": {
-    "plugins": ["react-hooks"],
+    "plugins": [
+      "react-hooks"
+    ],
     "rules": {
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn"
@@ -90,7 +92,6 @@
     "eslint-config-prettier": "^8.6.0",
     "prettier": "^2.8.4"
   },
-
   "overrides": {
     "nth-check": "2.1.1"
   }
