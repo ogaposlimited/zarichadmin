@@ -45,10 +45,6 @@ const Datatable2 = ({ columns, refreshKey, setRefreshKey }) => {
     reFetch();
   }, [refreshKey, reFetch]);
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
-
   if (error) {
     return <p>Error: {error.message}</p>;
   }
